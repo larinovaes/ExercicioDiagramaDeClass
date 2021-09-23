@@ -7,15 +7,13 @@ public class Heroi {
     public Heroi(String nome,double vida) {
         this.nome = nome;
         this.vida = vida;
-
     }
-
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String novoNome) {
+        this.nome = novoNome;
     }
 
     public double getVida() {
@@ -25,13 +23,13 @@ public class Heroi {
     public void setVida(double vida) {
         this.vida = vida;
     }
-    public void trocarNome( String nome){
-
+    public void trocarNome( String novoNome){
+      nome  = novoNome;
     }
     public void receberDano(double dano){
-
+      vida = vida - dano;
     }
-    public void exibirVida(){
-        double vidas;
+    public double exibirVida(){
+       return vida;
     }
 }

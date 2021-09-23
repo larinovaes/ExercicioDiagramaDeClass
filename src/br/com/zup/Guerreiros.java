@@ -7,7 +7,7 @@ public class Guerreiros extends Heroi{
         super(nome,vida);
         this.poderAtaque = poderAtaque;
     }
-    public void aplicarDano(){
-
+    public double aplicarDano(){
+     return poderAtaque;
     }
 }

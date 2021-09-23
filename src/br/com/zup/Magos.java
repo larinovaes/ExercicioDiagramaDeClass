@@ -7,7 +7,7 @@ public class Magos extends Heroi{
         super(nome,vida);
         this.poderMagico = poderMagico;
     }
-    public void aplicarMagia(){
-
+    public double aplicarMagia(){
+      return poderMagico;
     }
 }

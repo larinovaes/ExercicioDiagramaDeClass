@@ -9,6 +9,7 @@ public class Ingredientes {
         this.quantidade = quantidade;
     }
 
+
     public String getNome() {
         return nome;
     }
@@ -28,8 +29,8 @@ public class Ingredientes {
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
-        dados.append("Nome: " +nome);
-        dados.append("Quantidade: " + quantidade);
+        dados.append("\nNome do ingrediente: " +nome);
+        dados.append("\nQuantidade: " + quantidade);
         return dados.toString();
     }
 }

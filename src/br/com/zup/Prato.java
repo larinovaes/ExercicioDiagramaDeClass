@@ -29,14 +29,6 @@ public class Prato {
         this.valor = valor;
     }
 
-    public List<Ingrediente> getIngredientes() {
-        return ingredientes;
-    }
-
-    public void setIngredientes(List<Ingrediente> ingredientes) {
-        this.ingredientes = ingredientes;
-    }
-
     public void adicionarIngredientes(Ingrediente novoIngrediente){
         this.ingredientes.add(novoIngrediente);
     }
@@ -45,8 +37,8 @@ public class Prato {
     public String toString() {
         StringBuilder dadosDoPrato = new StringBuilder();
         dadosDoPrato.append("\nNome do Prato: " + nome);
-        dadosDoPrato.append("\nValor R$: " + valor);
         dadosDoPrato.append("\t\n----- Ingredientes -----" + ingredientes.toString());
+        dadosDoPrato.append("\nValor do prato R$: " + valor);
 
         return dadosDoPrato.toString();
     }

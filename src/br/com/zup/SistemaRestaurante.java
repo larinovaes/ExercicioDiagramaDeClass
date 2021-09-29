@@ -30,15 +30,12 @@ public class SistemaRestaurante {
 
     public static Ingredientes adicionarIngredientes() {
         String nomeDoIngrediente = dadosUsarios("Digite o nome do ingredientes: ").nextLine();
-        Ingredientes ingredientes = new Ingredientes(nomeDoIngrediente);
-        Cardapio cardapio = new Cardapio();
-        cardapio.toString();
+       Ingredientes ingredientes = new Ingredientes(nomeDoIngrediente);
         return ingredientes;
     }
 
     public static void executarSistema() {
         boolean menu = true;
-        Pratos pratos = new Pratos("",0);
         Cardapio cardapio = new Cardapio();
         while (menu) {
 
@@ -49,10 +46,7 @@ public class SistemaRestaurante {
                 cardapio.adicionandoPratosAoCardapio(adicionarPratos());
             }
             else if(opcao == 2){
-                Ingredientes ingredientes = adicionarIngredientes();
-                //for (Ingredientes novoIngrediente: pratos.getIngredientes()){
-                   // System.out.println(novoIngrediente);
-                //}
+
             }
             else if (opcao == 3){
                 for (Pratos novosPratos: cardapio.getPratosDoDia()) {

@@ -4,26 +4,26 @@ import java.util.Scanner;
 
 public class SistemaRestaurante {
 
-    private static Scanner dadosUsarios(String mensagem) {
+    public static Scanner dadosUsarios(String mensagem) {
         System.out.println(mensagem);
         return new Scanner(System.in);
     }
 
-    public static void menu() {
+    private static void menu() {
         System.out.println("------- BEM VINDO AO RESTAURANTE BELAVISTA -------");
         System.out.println("Digite [1] para adicionar um prato e seus ingredientes");
         System.out.println("Digite [2] para ver o cardápio");
         System.out.println("Digite [3] para sair do programa");
     }
 
-    public static Prato criarPrato() {
+    private static Prato criarPrato() {
         String nomeDoPrato = dadosUsarios("Qual nome do prato? ").nextLine();
         double valorDoPrato = dadosUsarios("Qual valor do prato? ").nextDouble();
         Prato prato = new Prato(nomeDoPrato, valorDoPrato);
         return prato;
     }
 
-    public static Ingrediente adicionarIngrediente() {
+    private static Ingrediente adicionarIngrediente() {
         String nomeDoIngrediente = dadosUsarios("Digite o nome do ingrediente: ").nextLine();
         Ingrediente ingrediente = new Ingrediente(nomeDoIngrediente);
         return ingrediente;
@@ -40,8 +40,8 @@ public class SistemaRestaurante {
 
             if (opcao == 1) {
                 Prato prato = criarPrato();
-                double qtdDeIndredientes = dadosUsarios("Quantos ingredientes deseja adicionar a esse prato?").nextDouble();
-                for (double i = 0; i < qtdDeIndredientes; i++) {
+                int qtdDeIndredientes = dadosUsarios("Quantos ingredientes deseja adicionar a esse prato?").nextInt();
+                for (int i = 0; i < qtdDeIndredientes; i++) {
                     Ingrediente ingrediente = adicionarIngrediente();
                     prato.adicionarIngredientes(ingrediente);
                 }

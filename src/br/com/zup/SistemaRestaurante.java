@@ -12,10 +12,9 @@ public class SistemaRestaurante {
 
     public static void menu() {
         System.out.println("------- BEM VINDO AO RESTAURANTE BELAVISTA -------");
-        System.out.println("Digite [1] para adicionar prato");
-        System.out.println("Digite [2] para para adicionar ingredientes");
-        System.out.println("Digite [3] para ver o cardápio");
-        System.out.println("Digite [4] para sair do programa");
+        System.out.println("Digite [1] para adicionar um prato e seus ingredientes");
+        System.out.println("Digite [2] para ver o cardápio");
+        System.out.println("Digite [3] para sair do programa");
     }
 
     public static Prato criarPrato() {
@@ -47,9 +46,8 @@ public class SistemaRestaurante {
                     prato.adicionarIngredientes(ingrediente);
                 }
                 cardapio.adicionarPrato(prato);
-            } else if (opcao == 2) {
-
-            } else if (opcao == 3) {
+            }
+            else if (opcao == 2) {
                 for (Prato novosPratos : cardapio.getPratosDoDia()) {
                     System.out.println(cardapio);
                 }

@@ -1,9 +1,9 @@
 package br.com.zup;
 
-public class Ingredientes {
+public class Ingrediente {
     private String nome;
 
-    public Ingredientes(String nome) {
+    public Ingrediente(String nome) {
         this.nome = nome;
     }
 
@@ -18,7 +18,7 @@ public class Ingredientes {
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
-        dados.append("\nNome do ingrediente: " +nome);
+        dados.append("\nIgrediente: " +nome);
         return dados.toString();
     }
 }

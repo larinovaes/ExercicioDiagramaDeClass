@@ -4,25 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cardapio{
-    private List<Pratos> pratosDoDia = new ArrayList<>();
+    private List<Prato> pratosDoDia = new ArrayList<>();
 
     public Cardapio(){
 
     }
 
-    public List<Pratos> getPratosDoDia() {
+    public List<Prato> getPratosDoDia() {
         return pratosDoDia;
     }
 
-   public void adicionandoPratosAoCardapio(Pratos pratos){
-        pratosDoDia.add(pratos);
+   public void adicionarPrato(Prato prato){
+        pratosDoDia.add(prato);
     }
 
     @Override
     public String toString() {
         StringBuilder dadosDoCardapio = new StringBuilder();
         dadosDoCardapio.append("---- CARDAPIO -----");
-        dadosDoCardapio.append(pratosDoDia.toString());
+        dadosDoCardapio.append("\nPratos:  " + pratosDoDia);
         return dadosDoCardapio.toString();
     }
 }

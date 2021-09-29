@@ -18,38 +18,39 @@ public class SistemaRestaurante {
         System.out.println("Digite [4] para sair do programa");
     }
 
-    public static Pratos adicionarPratos() {
+    public static Prato criarPrato() {
         String nomeDoPrato = dadosUsarios("Qual nome deseja da ao seu prato?").nextLine();
         double valorDoPrato = dadosUsarios("Qual valor do prato: ").nextDouble();
-        Pratos pratos = new Pratos(nomeDoPrato, valorDoPrato);
-        Cardapio cardapio = new Cardapio();
-        cardapio.adicionandoPratosAoCardapio(pratos);
-
-        return pratos;
+        Prato prato = new Prato(nomeDoPrato, valorDoPrato);
+        return prato;
     }
 
-    public static Ingredientes adicionarIngredientes() {
-        String nomeDoIngrediente = dadosUsarios("Digite o nome do ingredientes: ").nextLine();
-       Ingredientes ingredientes = new Ingredientes(nomeDoIngrediente);
+    public static Ingrediente adicionarIngrediente() {
+        String nomeDoIngrediente = dadosUsarios("Digite o nome do ingrediente: ").nextLine();
+        Ingrediente ingredientes = new Ingrediente(nomeDoIngrediente);
         return ingredientes;
     }
 
     public static void executarSistema() {
         boolean menu = true;
         Cardapio cardapio = new Cardapio();
+
         while (menu) {
 
             menu();
             int opcao = dadosUsarios("Qual a sua escolha?").nextInt();
 
             if (opcao == 1) {
-                cardapio.adicionandoPratosAoCardapio(adicionarPratos());
-            }
-            else if(opcao == 2){
+                Prato prato = criarPrato();
+                for (int i = 0; i < 5; i++) {
+                    Ingrediente ingrediente = adicionarIngrediente();
+                    prato.adicionarIngredientes(ingrediente);
+                }
+                cardapio.adicionarPrato(prato);
+            } else if (opcao == 2) {
 
-            }
-            else if (opcao == 3){
-                for (Pratos novosPratos: cardapio.getPratosDoDia()) {
+            } else if (opcao == 3) {
+                for (Prato novosPratos : cardapio.getPratosDoDia()) {
                     System.out.println(cardapio);
                 }
             } else {

@@ -3,12 +3,12 @@ package br.com.zup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pratos {
+public class Prato {
     private String nome;
     private double valor;
-    private List<Ingredientes> ingredientes = new ArrayList<>();
+    private List<Ingrediente> ingredientes = new ArrayList<>();
 
-    public Pratos(String nome, double valor) {
+    public Prato(String nome, double valor) {
         this.nome = nome;
         this.valor = valor;
     }
@@ -29,15 +29,15 @@ public class Pratos {
         this.valor = valor;
     }
 
-    public List<Ingredientes> getIngredientes() {
+    public List<Ingrediente> getIngredientes() {
         return ingredientes;
     }
 
-    public void setIngredientes(List<Ingredientes> ingredientes) {
+    public void setIngredientes(List<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
     }
 
-    public void adicionarIngredientes(Ingredientes novoIngrediente){
+    public void adicionarIngredientes(Ingrediente novoIngrediente){
         this.ingredientes.add(novoIngrediente);
     }
 

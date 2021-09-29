@@ -2,13 +2,10 @@ package br.com.zup;
 
 public class Ingredientes {
     private String nome;
-    private double quantidade;
 
-    public Ingredientes(String nome,double quantidade) {
+    public Ingredientes(String nome) {
         this.nome = nome;
-        this.quantidade = quantidade;
     }
-
 
     public String getNome() {
         return nome;
@@ -18,19 +15,10 @@ public class Ingredientes {
         this.nome = nome;
     }
 
-    public double getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(double quantidade) {
-        this.quantidade = quantidade;
-    }
-
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
         dados.append("\nNome do ingrediente: " +nome);
-        dados.append("\nQuantidade: " + quantidade);
         return dados.toString();
     }
 }

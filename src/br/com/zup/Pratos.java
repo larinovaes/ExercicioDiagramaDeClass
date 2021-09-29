@@ -46,7 +46,7 @@ public class Pratos {
         StringBuilder dadosDoPrato = new StringBuilder();
         dadosDoPrato.append("\nNome do Prato: " + nome);
         dadosDoPrato.append("\nValor R$: " + valor);
-        dadosDoPrato.append("\t\n--- Ingredientes ---\n" + ingredientes.toString());
+        dadosDoPrato.append("\t\n----- Ingredientes -----" + ingredientes.toString());
 
 
         return dadosDoPrato.toString();

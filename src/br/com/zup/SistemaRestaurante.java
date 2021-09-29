@@ -2,7 +2,6 @@ package br.com.zup;
 
 import java.util.Scanner;
 
-
 public class SistemaRestaurante {
 
     private static Scanner dadosUsarios(String mensagem) {
@@ -18,16 +17,16 @@ public class SistemaRestaurante {
     }
 
     public static Prato criarPrato() {
-        String nomeDoPrato = dadosUsarios("Qual nome deseja da ao seu prato?").nextLine();
-        double valorDoPrato = dadosUsarios("Qual valor do prato: ").nextDouble();
+        String nomeDoPrato = dadosUsarios("Qual nome do prato? ").nextLine();
+        double valorDoPrato = dadosUsarios("Qual valor do prato? ").nextDouble();
         Prato prato = new Prato(nomeDoPrato, valorDoPrato);
         return prato;
     }
 
     public static Ingrediente adicionarIngrediente() {
         String nomeDoIngrediente = dadosUsarios("Digite o nome do ingrediente: ").nextLine();
-        Ingrediente ingredientes = new Ingrediente(nomeDoIngrediente);
-        return ingredientes;
+        Ingrediente ingrediente = new Ingrediente(nomeDoIngrediente);
+        return ingrediente;
     }
 
     public static void executarSistema() {
@@ -41,7 +40,8 @@ public class SistemaRestaurante {
 
             if (opcao == 1) {
                 Prato prato = criarPrato();
-                for (int i = 0; i < 5; i++) {
+                double qtdDeIndredientes = dadosUsarios("Quantos ingredientes deseja adicionar a esse prato?").nextDouble();
+                for (double i = 0; i < qtdDeIndredientes; i++) {
                     Ingrediente ingrediente = adicionarIngrediente();
                     prato.adicionarIngredientes(ingrediente);
                 }

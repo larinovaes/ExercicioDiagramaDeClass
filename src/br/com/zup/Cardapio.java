@@ -3,10 +3,10 @@ package br.com.zup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cardapio{
+public class Cardapio {
     private List<Prato> pratosDoDia = new ArrayList<>();
 
-    public Cardapio(){
+    public Cardapio() {
 
     }
 
@@ -14,7 +14,7 @@ public class Cardapio{
         return pratosDoDia;
     }
 
-   public void adicionarPrato(Prato prato){
+    public void adicionarPrato(Prato prato) {
         pratosDoDia.add(prato);
     }
 

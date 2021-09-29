@@ -48,7 +48,6 @@ public class Pratos {
         dadosDoPrato.append("\nValor R$: " + valor);
         dadosDoPrato.append("\t\n----- Ingredientes -----" + ingredientes.toString());
 
-
         return dadosDoPrato.toString();
     }
 }

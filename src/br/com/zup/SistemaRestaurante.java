@@ -48,9 +48,7 @@ public class SistemaRestaurante {
                 cardapio.adicionarPrato(prato);
             }
             else if (opcao == 2) {
-                for (Prato novosPratos : cardapio.getPratosDoDia()) {
-                    System.out.println(cardapio);
-                }
+                System.out.println(cardapio);
             } else {
                 System.out.println("Voce saiu do programa!!");
                 menu = false;
